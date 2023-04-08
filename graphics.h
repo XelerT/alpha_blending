@@ -4,9 +4,9 @@
 #include <SFML/Graphics.hpp>
 
 enum errors {
-        NULL_CALLOC  = 0x0CA110C,
-        VBUF_ERR     = 0xBADB0F,
-        LOAD_IMG_ERR = 0xBAD186,
+        NULL_CALLOC    = 0x0CA110C,
+        VBUF_ERR       = 0xBADB0F,
+        LOAD_IMG_ERR   = 0xBAD186,
         IMG_SIZE_ERROR = 0xBAD312
 };
 

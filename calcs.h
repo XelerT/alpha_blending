@@ -3,7 +3,14 @@
 
 #include "graphics.h"
 
-int blend_imgs (sf::Image *new_img, sf::Image *front_img, sf::Image *back_img,
-                int front_img_width, int front_img_height, int start_x, int start_y);
+struct floating_img_t {
+        unsigned int width   = 0;
+        unsigned int height  = 0;
+                 int start_x = 0;
+                 int start_y = 0;
+};
+
+void slow_blend_imgs (sf::Image *new_img, sf::Image *front_img, sf::Image *back_img, floating_img_t floating_img);
+void avx_blend_imgs  (sf::Image *new_img, sf::Image *front_img, sf::Image *back_img, floating_img_t floating_img);
 
 #endif /*CALCS_H*/

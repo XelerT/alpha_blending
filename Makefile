@@ -48,7 +48,7 @@ CFLAGS = -Wshadow    						\
 
 all:
 	@ clear
-	g++ -o $(OUTPUT) $(CFLAGS) -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio $(CFILES)
+	g++ -o $(OUTPUT) -mavx2 -O3 $(CFLAGS) -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio $(CFILES)
 	@ echo Compiled c-files
 
 .PHONY: run

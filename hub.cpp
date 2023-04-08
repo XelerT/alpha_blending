@@ -45,13 +45,20 @@ int combine_imgs (const char *front_img_way, const char *back_img_way,
                 return IMG_SIZE_ERROR;
         }
 
+        floating_img_t fl_img = {
+                .width   = front_img_size.x,
+                .height  = front_img_size.y,
+                .start_x = 250,
+                .start_y = 200
+        };
+
         sf::Event event;
         while (window.isOpen()) {
                 while (window.pollEvent(event))
                         if (event.type == sf::Event::Closed) {
                                 window.close();
                         }
-                blend_imgs(&new_img, &front_img, &back_img, front_img_size.x, front_img_size.y, 250, 200);
+                avx_blend_imgs(&new_img, &front_img, &back_img, fl_img);
 
                 texture.loadFromImage(new_img);
                 screen.setTexture(texture);
