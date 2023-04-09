@@ -43,6 +43,6 @@ struct coordinates_t {
 int print_screen    (sf::RenderWindow *window, pixel_t *pixels, int window_height, int window_width);
 int save_pixel      (int window_width, int iteration, int max_n_iteration, pixel_t *pixels, int pixel_x, int pixel_y);
 int get_pressed_key ();
-void change_scale (int pressed_button, coordinates_t *coords);
+void change_scale   (int pressed_button, coordinates_t *coords);
 
 #endif /*GRAPHICS_H*/

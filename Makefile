@@ -53,7 +53,7 @@ all:
 
 .PHONY: run
 run:
-	@ ./$(OUTPUT) imgs/AskhatCat.bmp imgs/Table.bmp
+	@ ./$(OUTPUT) imgs/AskhatCat.bmp imgs/Table.bmp 1
 
 def:
 	@ g++ -E $(OUTPUT) $(CFLAGS) $(CFILES) >> defines.txt
